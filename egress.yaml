@@ -1,0 +1,11 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: ServiceEntry
+metadata:
+  name: tablestore-tls-ext
+spec:
+  hosts:
+  - "*.aliyuncs.com"
+  ports:
+  - number: 443
+    name: tls
+    protocol: TLS
