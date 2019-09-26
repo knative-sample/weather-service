@@ -1,13 +1,13 @@
 apiVersion: serving.knative.dev/v1alpha1
 kind: Service
 metadata:
-  name: weather-store
+  name: weather-service
   namespace: default
 spec:
   template:
     metadata:
       labels:
-        app: weather-store
+        app: weather-service
       annotations:
         autoscaling.knative.dev/maxScale: "20"
         autoscaling.knative.dev/target: "100"
