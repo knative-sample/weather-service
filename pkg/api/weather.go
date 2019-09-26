@@ -56,6 +56,7 @@ func ResponseJson(qr *QueryResponse, w http.ResponseWriter) {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
+	glog.Infof("response: %s", rs)
 	w.Header().Set("Content-Type", "application/json")
 	w.Write(rs)
 }
